@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video.js Example with Bootstrap</title>
 
-    <!-- Bootstrap CSS -->
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    <!-- Video.js CSS -->
+
     <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet">
 
-    <!-- Video.js JS -->
+    
     <script src="https://vjs.zencdn.net/7.14.3/video.js"></script>
 </head>
 
@@ -22,18 +22,18 @@
         <div class="row justify-content-center">
             <div class="col-md-8" >
 
-                <!-- Title and Heading -->
+                
                 <div class="text-center mb-4" style="background-color:lightsteelblue";>
                     <h2>Merged Video Player</h2>
                     <p>This player sequentially plays two videos.</p>
                 </div>
 
-                <!-- Merged Video -->
+            
                 <video id="mergedVideo" class="video-js vjs-default-skin" controls preload="auto" width="720" height="720">
                     Your browser does not support the video tag.
                 </video>
 
-                <!-- Replay Button -->
+            
                 <button id="replayButton" class="btn btn-primary mt-3" style="display: none;">Replay</button>
 
             </div>
@@ -41,37 +41,36 @@
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-        // Create a new video element for the merged video
         var mergedVideo = videojs('mergedVideo');
 
-        // Array of video sources
+    
         var videoSources = [
             { src: 'video1.mp4', type: 'video/mp4' },
             { src: 'video2.mp4', type: 'video/mp4' }
         ];
-        // Start playing videos
+        
         playVideos(0);
-        // Function to play videos one after the other
+    
         function playVideos(index) {
             if (index < videoSources.length) {
-                // Set the source for the merged video
+            
                 mergedVideo.src(videoSources[index]);
 
-                // Play the video
+                
                 mergedVideo.play();
 
-                // When the video ends, stop the playback
+            
                 mergedVideo.on('ended', function () {
-                    // Stop the video playback
+                
                     mergedVideo.pause();
                     
-                    // Show the replay button after the last video ends
+                
                     if (index === videoSources.length - 1) {
                         
                         document.getElementById('replayButton').style.display = 'block';
                         
                     } else {
-                        // Play the next video in the array
+                    
                         playVideos(index + 1);
                         index++;
                         document.getElementById('replayButton').style.display = 'block';
