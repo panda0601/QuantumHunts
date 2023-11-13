@@ -6,10 +6,10 @@ const mysql = require('mysql');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Set up middleware
+
 app.use(bodyParser.json());
 
-// Set up MySQL connection
+
 const connection = mysql.createConnection({
     host: '127.0.0.1',
     user: 'root',
@@ -25,7 +25,7 @@ connection.connect(err => {
     }
 });
 
-// Set up nodemailer
+
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -34,13 +34,12 @@ const transporter = nodemailer.createTransport({
     },
 });
 
-// Survey submission endpoint
 app.post('/submit-survey', (req, res) => {
     try {
-        // Extract survey data from the request body
+        
         const surveyData = req.body;
 
-        // Insert survey data into the database
+        
         const insertQuery = `
             INSERT INTO surveys (question1, question2, question3, email)
             VALUES (?, ?, ?, ?);
@@ -60,7 +59,7 @@ app.post('/submit-survey', (req, res) => {
             } else {
                 const surveyId = results.insertId;
 
-                // Send completion email
+        
                 const mailOptions = {
                     from: 'your-email@gmail.com',
                     to: surveyData.email,
