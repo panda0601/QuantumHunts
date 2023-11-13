@@ -1,0 +1,5 @@
+# QuantumHunts
+QuantumHunts Task and projects
+1. The first Task " Hug in a Mug " is a single page website for coffee shop. It is built using html, css and javascript. It is very easy to run this code. Just download the entire file and place it in a folder where you want to place it and just run the index file. If you want to change anything just open the file in a any editor and make changes and run.
+2. The second task " Merged video " is a video js webpage.  It is built using html, css and javascript. It contains two mp4 files and these 2 files will play as a merged video like a youtube ad. Once file1 plays, file2 resume playing it. If the video is replayed, it would still play file1 followed by file2. Just download the code and videos and run it. If you want any other video just placed in a folder where this file is placed and renamed the video file as video1 and video2.
+3. The third task " Survey " is survey form which is built using html, css and js. To run this code, download the file and place it in folder. Download node.js, which is used as a backend tool.
