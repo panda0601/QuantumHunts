@@ -7,7 +7,7 @@ body {
   line-height: 1.5;
   background-color: #E0E5EC;
 }
-/* helper/utility classes */
+
 a {
   text-decoration: none;
 }
@@ -83,7 +83,6 @@ html {
   }
 }
 
-/* banner */
 .fix {
   position: fixed;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -333,7 +332,6 @@ html {
   }
 }
 
-/* end  header */
 .content-divider {
   height: 0.5rem;
   background: linear-gradient(
@@ -862,8 +860,6 @@ a{
   cursor: pointer;
 }
 
-/* test */
-
 .menu-drinks-on{
   position: absolute;
   visibility: visible;
@@ -895,8 +891,6 @@ a{
 
 fieldset{ margin: 0; padding: 0; }
 
-/****** Style Star Rating Widget *****/
-
 .rating { 
   border: none;
   float: left;
@@ -921,15 +915,13 @@ fieldset{ margin: 0; padding: 0; }
  float: right; 
 }
 
-/***** CSS Magic to Highlight Stars on Hover *****/
+.rating > input:checked ~ label, 
+.rating:not(:checked) > label:hover, 
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } 
 
-.rating > input:checked ~ label, /* show gold star when clicked */
-.rating:not(:checked) > label:hover, /* hover current star */
-.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
-
-.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked + label:hover, 
 .rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > label:hover ~ input:checked ~ label, 
 .rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
 
 .opening-container {
@@ -974,10 +966,6 @@ fieldset{ margin: 0; padding: 0; }
   font-size: 17px;
 }
 
-/*tests*/
-
-
-
 * {box-sizing: border-box;}
 body {font-family: Verdana, sans-serif;}
 .mySlides {
@@ -987,7 +975,6 @@ body {font-family: Verdana, sans-serif;}
 }
 img {vertical-align: middle;}
 
-/* Slideshow container */
 .slideshow-container {
   padding-top: 50px;
   padding-left: 0px;
@@ -1096,7 +1083,6 @@ img {vertical-align: middle;}
   float: left;
 }
 
-/* Caption text */
 .text {
   color: #f2f2f2;
   font-size: 15px;
@@ -1106,11 +1092,6 @@ img {vertical-align: middle;}
   width: 100%;
   text-align: center;
 }
-
-
-
-/* The dots/bullets/indicators */
-
 
 .dot {
   height: 10px;
@@ -1129,7 +1110,6 @@ img {vertical-align: middle;}
   background-color: #bd1220;
 }
 
-/* Fading animation */
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
